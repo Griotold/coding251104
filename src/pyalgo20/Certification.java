@@ -1,5 +1,7 @@
-import java.util.Arrays;
+package pyalgo20;
 
+import java.util.Arrays;
+// 1. 자격 증명 : 요구사항 구현
 public class Certification {
 
     // 65 ~ 90 : A ~ Z // 97 ~ 122 : a ~ z
