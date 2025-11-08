@@ -6,7 +6,7 @@
 
 ```java
 public class BinaryOutput_2 { }
-public class Recursive_1 { }
+public class Factorial_1 { }
 ```
 
 ---
@@ -23,27 +23,42 @@ public class Recursive_1 { }
 
 **예시:**
 ```
-기초부터 - step 7 - 2. 재귀
+기초부터 - step 7 - 1. 팩토리얼
 
-* 이진수 출력 - 재귀와 후위 순회
-* n을 2로 나눈 몫으로 재귀, n%2로 이진 자릿수 출력
+* 재귀 함수로 팩토리얼 계산
+* n * factorial(n-1) 형태
 ```
 
 ---
 
 ## 3. 재귀함수 구조 (김태원 스타일)
 
-**항상 if-else 구조로 작성**
+**항상 if-else 구조로 작성, 함수명은 DFS로 통일**
 
 ```java
-public void DFS(int n) {
-    if(조건) return;        // 베이스 케이스
+public 반환타입 DFS(int n) {
+    if(조건) return 값;        // 베이스 케이스
     else {
         // 재귀 로직
-        DFS(...);
+        return DFS(...);
     }
 }
+
+반환타입 solution(int n) {
+    return DFS(n);
+}
+
+public static void main(String[] args) {
+    클래스명 T = new 클래스명();
+    System.out.println(T.solution(5));
+}
 ```
+
+**특징:**
+- static 키워드 사용 X (인스턴스 메서드)
+- 함수명은 항상 DFS로 통일
+- solution()으로 DFS를 감싸서 호출
+- main에서 인스턴스 T 생성 후 T.solution() 호출
 
 ---
 
@@ -54,7 +69,7 @@ public void DFS(int n) {
 ```java
 static int[] dy = {-1, 0, 1, 0};
 static int[] dx = {0, 1, 0, -1};
-// 상, 하, 좌, 우
+// 상, 우, 하, 좌
 ```
 
 ---
@@ -101,7 +116,7 @@ public class CalculateArea2583 {
             return ret;
         }
     }
-    
+
 //    static int dfs(int y, int x) {
 //        visited[y][x] = 1;
 //        int ret = 1;
@@ -176,7 +191,7 @@ public class CalculateArea2583 {
 ## 6. 학습 방향
 
 ### 기초 학습 - 현재 학습중
-- **김태원** 강사: 기초 개념, if-else 재귀 구조
+- **김태원** 강사: 기초 개념, if-else 재귀 구조, DFS 패턴
 - **큰돌** 강사: DFS/BFS, 2D 배열 탐색, (y, x) 좌표
 
 ### 실전 학습 - 예정
