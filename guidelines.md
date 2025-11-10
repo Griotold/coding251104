@@ -188,7 +188,47 @@ public class CalculateArea2583 {
 
 ---
 
-## 6. 학습 방향
+## 6. Deque 사용 방법 (스택/큐)
+
+**ArrayDeque 사용 (LinkedList보다 성능 우수)**
+
+### 큐 (FIFO - First In First Out)
+```java
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+Deque<Integer> queue = new ArrayDeque<>();
+queue.offer(1);      // 뒤에 추가
+queue.offer(2);      // 뒤에 추가
+queue.offer(3);      // 뒤에 추가
+// 결과: 1 2 3
+
+int first = queue.poll();  // 1 (앞에서 제거)
+// 남은 것: 2 3
+```
+
+### 스택 (LIFO - Last In First Out)
+```java
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+Deque<Integer> stack = new ArrayDeque<>();
+stack.push(1);       // 앞에 추가
+stack.push(2);       // 앞에 추가
+stack.push(3);       // 앞에 추가
+// 결과: 3 2 1
+
+int top = stack.pop();  // 3 (앞에서 제거)
+// 남은 것: 2 1
+```
+
+**메서드 정리:**
+- 큐: `offer()` (뒤에 추가) + `poll()` (앞에서 제거)
+- 스택: `push()` (앞에 추가) + `pop()` (앞에서 제거)
+- `isEmpty()`: 비었는지 확인
+---
+
+## 7. 학습 방향
 
 ### 기초 학습 - 현재 학습중
 - **김태원** 강사: 기초 개념, if-else 재귀 구조, DFS 패턴
