@@ -190,6 +190,11 @@ public class CalculateArea2583 {
 
 ## 6. Deque 사용 방법 (스택/큐)
 
+**Import 규칙**
+```java
+import java.util.*;
+```
+
 **ArrayDeque 사용 (LinkedList보다 성능 우수)**
 
 ### 큐 (FIFO - First In First Out)
@@ -226,6 +231,10 @@ int top = stack.pop();  // 3 (앞에서 제거)
 - 큐: `offer()` (뒤에 추가) + `poll()` (앞에서 제거)
 - 스택: `push()` (앞에 추가) + `pop()` (앞에서 제거)
 - `isEmpty()`: 비었는지 확인
+
+**변수명 규칙:**
+- 큐 변수명: `queue`
+- 스택 변수명: `stack`
 ---
 
 ## 7. 학습 방향
